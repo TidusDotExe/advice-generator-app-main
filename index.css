@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: var(--dark-blue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+}
+
+#container {
+    background-color: var(--dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 100%;
+}
+
+
+#advice {
+    font-size: 28px;
+    color: white;
+    font-weight: 800;
+    padding: 0 5% 4% 5%;
+}
+
+#advice-id-block {
+    color: var(--neon-green);
+    font-size: 11px;
+    letter-spacing: 5px;
+    font-weight: 800;
+    padding: 4% 0 4%;
+}
+
+#divider {
+    background-image: url("images/pattern-divider-mobile.svg");
+    height: 16px;
+    margin: 4% 8% 20% 8%;
+}
+
+#dice {
+    width: 25px;
+}
+
+#dice-block {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    min-width: 100%;
+}
+
+#dice-container {
+    background-color: var(--neon-green);
+    border-radius: 100%;
+    display: flex;
+    width: fit-content;
+    padding: 5% 5% 5% 5%;
+    cursor: pointer;
+}
+
+#dice-container:hover {
+    filter: drop-shadow(0 0 10px var(--neon-green));
+}
+
+@media (min-width: 1440px) {
+    #divider {
+        background-image: url("images/pattern-divider-desktop.svg");
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 444px;
+    }
+
+    #container {
+        min-width:fit-content;
+        width: 520px;
+    }
+
+    #dice-block {
+        width: 520px;
+        min-width: auto;
+    }
+
+    #advice {
+        max-width: fit-content;
+    }
+}
